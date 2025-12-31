@@ -100,28 +100,28 @@
 
         SYMBOLS {
             bindings = <
-&kp ESCAPE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                  &parenthesis   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans             &trans
-&kp TILDE   &kp DOLLAR       &kp PERCENT   &kp CARET             &trans                 &trans      &trans              &braces        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SINGLE_QUOTE   &kp BACKSLASH
-&kp GRAVE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                 &trans      &trans              &brackets      &kp LEFT_BRACKET      &kp LEFT_BRACKET       &kp DOUBLE_QUOTES  &kp PIPE
-&trans      &trans           &trans        &trans                &trans                 &trans      &kp LC(LEFT_ARROW)  &kp LC(RIGHT)                                                                  &trans
+&kp ESCAPE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                 &parenthesis   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none              &none
+&kp TILDE   &kp DOLLAR       &kp PERCENT   &kp CARET             &none                  &none      &none               &braces        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SINGLE_QUOTE   &kp BACKSLASH
+&kp GRAVE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &none                  &none      &none               &brackets      &kp LEFT_BRACKET      &kp LEFT_BRACKET       &kp DOUBLE_QUOTES  &kp PIPE
+&none       &none            &none         &none                 &none                  &none      &kp LC(LEFT_ARROW)  &kp LC(RIGHT)                                                                  &none
             >;
         };
 
         NUM {
             bindings = <
-&mt F1 F1  &mt F2 LS(LG(F2))  &kp F3  &mt LG(LS(F4)) F4  &kp F5                       &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&kp F6     &kp F7             &kp F8  &kp F9             &kp F10  &trans      &trans  &kp PLUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
-&kp F11    &kp F12            &trans  &trans             &trans   &trans      &trans  &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
-&trans     &trans             &trans  &trans             &trans   &trans      &trans  &trans                                               &trans
+&mt F1 F1  &mt F2 LS(LG(F2))  &kp F3  &mt LG(LS(F4)) F4  &kp F5                     &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&kp F6     &kp F7             &kp F8  &kp F9             &kp F10  &none      &none  &kp PLUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none
+&kp F11    &kp F12            &none   &none              &none    &none      &none  &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+&none      &none              &none   &none              &none    &none      &none  &none                                                &none
             >;
         };
 
         ARROW {
             bindings = <
-&kp LG(LEFT_ARROW)  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &kp LG(RIGHT_ARROW)                      &kp LG(LEFT_ARROW)  &kp LS(LC(TAB))         &kp UP_ARROW    &kp LC(TAB)              &kp LG(RIGHT_ARROW)
-&kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END              &trans      &trans  &kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END
-&kp LEFT_SHIFT      &kp LG(LC(LEFT_ARROW))  &trans          &kp LG(LC(RIGHT_ARROW))  &trans               &trans      &trans  &trans              &kp LC(LG(LEFT_ARROW))  &trans          &kp LC(LG(RIGHT_ARROW))  &trans
-&trans              &trans                  &trans          &trans                   &trans               &trans      &trans  &trans                                                                               &trans
+&kp LG(LEFT_ARROW)  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &kp LG(RIGHT_ARROW)                    &kp LG(LEFT_ARROW)  &kp LS(LC(TAB))         &kp UP_ARROW    &kp LC(TAB)              &kp LG(RIGHT_ARROW)
+&kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END              &none      &none  &kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END
+&kp LEFT_SHIFT      &kp LG(LC(LEFT_ARROW))  &none           &kp LG(LC(RIGHT_ARROW))  &none                &none      &none  &none               &kp LC(LG(LEFT_ARROW))  &none           &kp LC(LG(RIGHT_ARROW))  &none
+&none               &none                   &none           &none                    &none                &none      &none  &none                                                                                &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -130,9 +130,9 @@
         MOUSE {
             bindings = <
 &to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R  &to_layer_0 T                            &to_layer_0 Y    &to_layer_0 U      &kp LC(T)          &to_layer_0 O      &mo 5
-&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F  &to_layer_0 G  &trans         &kp LC(V)  &kp LC(LS(TAB))  &mkp_exit_AML MB1  &mkp_exit_AML MB3  &mkp_exit_AML MB2  &kp LC(TAB)
-&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V  &to_layer_0 B  &trans         &kp LC(C)  &to_layer_0 N    &mkp MB4           &kp LC(W)          &mkp MB5           &trans
-&trans         &trans         &trans         &trans         &mkp LCLK      &mkp RCLK      &trans     &trans                                                                    &trans
+&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F  &to_layer_0 G  &none          &kp LC(V)  &kp LC(LS(TAB))  &mkp_exit_AML MB1  &mkp_exit_AML MB3  &mkp_exit_AML MB2  &kp LC(TAB)
+&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V  &to_layer_0 B  &none          &kp LC(C)  &to_layer_0 N    &mkp MB4           &kp LC(W)          &mkp MB5           &none
+&none          &none          &none          &none          &mkp LCLK      &mkp RCLK      &none      &none                                                                     &none
             >;
         };
 
@@ -147,10 +147,10 @@
 
         layer_6 {
             bindings = <
-&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans          &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &trans
-&trans  &trans        &trans          &trans        &trans  &trans      &trans       &trans                                                  &trans
+&none  &bt BT_CLR    &bt BT_CLR_ALL  &none         &none                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none  &none         &none           &none         &none  &none      &none        &none         &none         &none         &none         &none
+&none  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &none  &none      &bootloader  &none         &none         &none         &none         &none
+&none  &none         &none           &none         &none  &none      &none        &none                                                   &none
             >;
         };
     };
