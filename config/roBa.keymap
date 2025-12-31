@@ -92,7 +92,7 @@
 &mt ESCAPE Q      &kp W         &kp E         &kp R      &kp T                                                    &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
 &kp A             &kp S         &kp D         &kp F      &kp G        &mkp_exit_AML RCLK      &mkp_exit_AML RCLK  &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B        &mkp LCLK               &kp BACKSPACE       &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 TAB  &lt 2 SPACE  &lt 1 LANGUAGE_1        &kp LANGUAGE_2      &lt 1 ENTER                             &lt 6 RIGHT_SHIFT
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 TAB  &lt 2 SPACE  &lt 1 LANGUAGE_2        &kp LANGUAGE_1      &lt 1 ENTER                             &lt 6 RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_up_down>;
