@@ -35,8 +35,8 @@
         };
 
         BT3 {
-            bindings = <&none>;
-            key-positions = <28 25>;
+            bindings = <&kp LCTRL>;
+            key-positions = <>;
         };
     };
 
@@ -68,6 +68,34 @@
             #binding-cells = <0>;
             bindings = <&kp LANG_HANJA &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
             label = "parenthesis";
+        };
+
+        displey_left: displey_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL &kp LEFT_ARROW>;
+            label = "DISPLEY_LEFT";
+        };
+
+        display_right: display_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL &kp RIGHT>;
+            label = "DISPLAY_RIGHT";
+        };
+
+        braces: curly_rackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG_HANJA &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
+            label = "CURLY_RACKETS";
+        };
+
+        brackets: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG_HANJA &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -108,10 +136,10 @@
 
         SYMBOLS {
             bindings = <
-&kp ESCAPE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans             &trans
-&kp TILDE   &kp DOLLAR       &kp PERCENT   &kp CARET             &trans                 &trans      &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &kp SINGLE_QUOTE   &kp BACKSLASH
-&kp GRAVE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                 &trans      &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON      &kp DOUBLE_QUOTES  &kp PIPE
-&trans      &trans           &trans        &trans                &trans                 &trans      &trans  &trans                                                                         &trans
+&kp ESCAPE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans             &trans
+&kp TILDE   &kp DOLLAR       &kp PERCENT   &kp CARET             &trans                 &trans       &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &kp SINGLE_QUOTE   &kp BACKSLASH
+&kp GRAVE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                 &trans       &trans         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON      &kp DOUBLE_QUOTES  &kp PIPE
+&trans      &trans           &trans        &parenthesis          &brackets              &braces      &displey_left  &display_right                                                                 &trans
             >;
         };
 
@@ -137,10 +165,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R  &to_layer_0 T                         &to_layer_0 Y    &to_layer_0 U      &kp LC(T)          &to_layer_0 O      &mo 5
-&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F  &to_layer_0 G  &trans      &kp LC(V)  &kp LC(LS(TAB))  &mkp_exit_AML MB1  &mkp_exit_AML MB3  &mkp_exit_AML MB2  &kp LC(TAB)
-&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V  &to_layer_0 B  &trans      &kp LC(C)  &to_layer_0 N    &mkp MB4           &kp LC(W)          &mkp MB5           &trans
-&trans         &trans         &trans         &trans         &trans         &trans      &trans     &trans                                                                    &trans
+&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R  &to_layer_0 T                            &to_layer_0 Y    &to_layer_0 U      &kp LC(T)          &to_layer_0 O      &mo 5
+&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F  &to_layer_0 G  &trans         &kp LC(V)  &kp LC(LS(TAB))  &mkp_exit_AML MB1  &mkp_exit_AML MB3  &mkp_exit_AML MB2  &kp LC(TAB)
+&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V  &to_layer_0 B  &trans         &kp LC(C)  &to_layer_0 N    &mkp MB4           &kp LC(W)          &mkp MB5           &trans
+&trans         &trans         &trans         &trans         &mkp LCLK      &mkp RCLK      &trans     &trans                                                                    &trans
             >;
         };
 
