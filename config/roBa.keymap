@@ -16,29 +16,7 @@
 &sl { release-after-ms = <250>; };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        BT0 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <28>;
-        };
-
-        BT1 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <28 23>;
-        };
-
-        BT2 {
-            bindings = <&bt BT_SEL 2>;
-            key-positions = <28 24>;
-        };
-
-        BT3 {
-            bindings = <&kp LCTRL>;
-            key-positions = <>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -68,20 +46,6 @@
             #binding-cells = <0>;
             bindings = <&kp LANG_HANJA &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
             label = "parenthesis";
-        };
-
-        displey_left: displey_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt LCTRL &kp LEFT_ARROW>;
-            label = "DISPLEY_LEFT";
-        };
-
-        display_right: display_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt LCTRL &kp RIGHT>;
-            label = "DISPLAY_RIGHT";
         };
 
         braces: curly_rackets {
@@ -125,10 +89,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R      &kp T                                                    &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
+&mt ESCAPE Q      &kp W         &kp E         &kp R      &kp T                                                    &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
 &kp A             &kp S         &kp D         &kp F      &kp G        &mkp_exit_AML LCLK      &mkp_exit_AML RCLK  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B        &kp LANGUAGE_1          &kp LANGUAGE_2      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 TAB  &lt 2 SPACE  &lt 1 ESCAPE            &kp BACKSPACE       &lt 1 ENTER                             &lt 6 RIGHT_SHIFT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B        &kp ESCAPE              &kp BACKSPACE       &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 TAB  &lt 2 SPACE  &lt 1 LANGUAGE_1        &kp LANGUAGE_2      &lt 1 ENTER                             &lt 6 RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -136,10 +100,10 @@
 
         SYMBOLS {
             bindings = <
-&kp ESCAPE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                             &parenthesis    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans             &trans
-&kp TILDE   &kp DOLLAR       &kp PERCENT   &kp CARET             &trans                 &trans      &trans         &braces         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SINGLE_QUOTE   &kp BACKSLASH
-&kp GRAVE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                 &trans      &trans         &brackets       &kp LEFT_BRACKET      &kp LEFT_BRACKET       &kp DOUBLE_QUOTES  &kp PIPE
-&trans      &trans           &trans        &trans                &trans                 &trans      &displey_left  &display_right                                                                  &trans
+&kp ESCAPE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                  &parenthesis   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans             &trans
+&kp TILDE   &kp DOLLAR       &kp PERCENT   &kp CARET             &trans                 &trans      &trans              &braces        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SINGLE_QUOTE   &kp BACKSLASH
+&kp GRAVE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                 &trans      &trans              &brackets      &kp LEFT_BRACKET      &kp LEFT_BRACKET       &kp DOUBLE_QUOTES  &kp PIPE
+&trans      &trans           &trans        &trans                &trans                 &trans      &kp LC(LEFT_ARROW)  &kp LC(RIGHT)                                                                  &trans
             >;
         };
 
